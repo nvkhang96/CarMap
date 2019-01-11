@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/report_detail_divider_route_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        android:visibility="gone"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <include layout="@layout/report_detail_layout" />
+
+    <LinearLayout
+        android:id="@+id/llRouteInfo_route_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/divider"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/btnSelectedRoute_route_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="7"
+            android:background="@color/background_front"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingStart="20dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/tvDuration_route_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="0 phút"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvDistance_route_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="0 km"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingStart="20dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:id="@+id/tvNumReport_route_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="0 báo hiệu"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="@color/dangerous"
+                    android:textSize="18sp" />
+                    <!--android:visibility="gone" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSteps_route_info"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/background_back"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="2dp"
+                android:paddingStart="20dp"
+                android:paddingTop="2dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    app:srcCompat="@drawable/ic_menu_grey_800_48dp" />
+
+                <TextView
+                    android:id="@+id/tvSteps_detail_route_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:text="CHI TIẾT CÁC BƯỚC"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStartNavigation_route_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_btn_yes_stroke"
+                android:text="ĐI"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center_vertical|end"-->
+            <!--android:paddingEnd="8dp"-->
+            <!--android:paddingStart="10dp"-->
+            <!--android:text="ĐI"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="28sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="36dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:srcCompat="@drawable/ic_directions_white_48dp" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
